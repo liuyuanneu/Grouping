@@ -1,0 +1,34 @@
+{
+  "name": "groups",
+  "version": "1.0.0",
+  "description": "mvp project",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server/server.js"
+  },
+  "engines": {
+    "node": "0.12.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyuanneu/MVP-Groups.git"
+  },
+  "author": "Yuan Liu",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/liuyuanneu/MVP-Groups#readme",
+  "devDependencies": {
+    "gulp": "^3.8.5",
+    "gulp-nodemon": "^1.0.4",
+    "gulp-shell": "^0.2.7"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.4.3",
+    "express": "^4.4.5",
+    "jwt-simple": "^0.2.0",
+    "mongoose": "~3.8.8",
+    "request": "^2.36.0",
+    "bluebird": "1.0.8",
+    "lodash": "~2.4"
+  }
+}
