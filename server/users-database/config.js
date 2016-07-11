@@ -10,3 +10,5 @@ mongoose.connection.on('error', function(err) {
 mongoose.connection.on('open', function() {
   console.log('mongoose connected ok');
 });
+
+module.exports = mongoose;
