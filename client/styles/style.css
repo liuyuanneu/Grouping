@@ -1,0 +1,64 @@
+body {
+  background: #fff;
+  color: #333;
+  font-family: Lato, sans-serif;
+}
+.container {
+  display: block;
+  margin: 100px auto 0;
+}
+
+h1{
+  text-align:center;
+  margin: 100px auto 0;
+}
+
+a{
+  appearance: button; /* CSS3 */
+  -webkit-appearance: button; /* Safari and Chrome */
+  /*padding: 5px 15px;*/
+  color: #000;
+  text-decoration: none;
+}
+.navigation {
+
+  height: 40px;
+  text-align: center;
+}
+
+.navigation ul {
+
+  list-style: none;
+}
+
+.navigation li {
+  float: left;
+}
+
+.navigation li a {
+  width: 300px;
+  height: 40px;
+  line-height: 20px;
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+.navigation li a:hover {
+  background-color: #ddd;
+}
+
+.navigation li a.selected {
+  background-color: #ccc;
+}
+
+form {
+  margin: 10px;
+}
+
+input {
+  width: 360px;
+  display: block;
+  font-size: 13px;
+  padding: 5px;
+  margin-bottom: 5px;
+}

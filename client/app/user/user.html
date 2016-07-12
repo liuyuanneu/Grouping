@@ -1,8 +1,10 @@
-<div id='user'>
-  <h1>Add a Member of Group</h1>
-  <form name='userForm' ng-submit='addUser(user)'>
-    <input type='text' ng-model='user.username' placeholder="Full Name">
-    <input type='text' ng-model='user.location' placeholder="Location">
+<div id='user' class='form-group'>
+  <h2>Add a Group Member</h2>
+  <form name='userForm' ng-submit='addUser(user)' class="form-horizontal">
+    <label for='username'>Name</label>
+    <input id="username" type='text' ng-model='user.username' placeholder="Full Name">
+    <label for="location">Location</label>
+    <input id="location" type='text' ng-model='user.location' placeholder="Location">
     <button>Add Group Member</button>
   </form>
 </div>
