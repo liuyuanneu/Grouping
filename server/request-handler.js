@@ -19,7 +19,8 @@ exports.addUser = function(req,res){
   User.findOne({username: user.username})
     .exec(function(err,found){
       if(found){
-        res.send(200,found);
+        console.log('He/She is already a memeber: ',found)
+        res.send("The member is already in the list!");
       }else{
         var newUser = new User({
           username: user.username,

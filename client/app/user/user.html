@@ -6,6 +6,7 @@
     <label for="location">Location</label>
     <input id="location" type='text' ng-model='user.location' placeholder="Location">
     <button>Add Group Member</button>
+    <div ng-show ='userexist'>The person you put in is already in the list.</div>
   </form>
   <div ng-model='num'>You have added {{num}} group memebers!</div>
 </div>

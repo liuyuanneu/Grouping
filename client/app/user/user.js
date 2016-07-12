@@ -2,6 +2,7 @@ angular.module('groups.user',[])
 
 .controller('UserController',function($scope,$http){
   $scope.user = {};
+  $scope.userexist = false;
   $scope.count = function(){
     $http({
       method:'GET',
@@ -22,9 +23,15 @@ angular.module('groups.user',[])
     })
     .then(function(res){
       console.log('returning response from server',res);
+      if(typeof res.data === 'string'){
+        $scope.userexist = true;
+      }else{
+        $scope.userexist = false;
+      }
       $scope.user.username = '';
       $scope.user.location = '';
       $scope.count();
+
 
     })
   }
