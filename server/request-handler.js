@@ -5,6 +5,7 @@ exports.fetchGroup = function(req,res){
   User.find({})
     .exec(function(err,user){
       if(!err){
+        console.log('fetch all the users: ',user);
         res.send(200,user)
       }else{
         console.log('Can not get data from database.');
