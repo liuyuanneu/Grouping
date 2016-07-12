@@ -24,6 +24,7 @@ angular.module('groups.user',[])
       console.log('returning response from server',res);
       $scope.user.username = '';
       $scope.user.location = '';
+      $scope.count();
 
     })
   }
