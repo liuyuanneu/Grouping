@@ -1,20 +1,21 @@
 angular.module("groups",[
   'groups.user',
-  'groups.group'
+  'groups.group',
+  'ngRoute'
 ])
 
 .config(function($routeProvider,$httpProvider){
   $routeProvider
     .when('/users',{
-      templatedUrl: 'app/user/user.html',
+      templateUrl: 'app/user/user.html',
       controller:'UserController'
     })
     .when('/group',{
-      templatedUrl: 'app/group/group.html',
+      templateUrl: 'app/group/group.html',
       controller: 'GroupController'
     })
-    .otherwise('/group',{
-      templatedUrl: 'app/group/group.html',
-      controller: 'GroupController'
+    .otherwise('/users',{
+      templateUrl: 'app/user/user.html',
+      controller:'UserController'
     })
 })
