@@ -10,7 +10,7 @@ angular.module('groups.user',[])
       data: user
     })
     .then(function(res){
-      console.log('returning response from server' + res);
+      console.log('returning response from server');
     })
   }
 })

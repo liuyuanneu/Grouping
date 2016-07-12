@@ -2,8 +2,10 @@
   <h1>Groups:</h1>
   <input type='number' name='dividingNumber' ng-model='data.count'>
   <button ng-click='grouping()'>Grouping</button>
-  <input type='text' name='search' ng-model='person'>
-  <ul>
-    <li></li>
+  <label>Search: </label><input type='text' name='search' ng-model='user'>
+  <ul ng-repeat='pair in data.pairs | filter:user'>
+    <li ng-model='pair.username' ng-repeat='user in pair'>
+      <div ng-model='user.username'>{{user.username}}</div>
+    </li>
   </ul>
 </div>
