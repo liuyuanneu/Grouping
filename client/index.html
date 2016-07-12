@@ -13,23 +13,21 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <h1>Groups</h1>
-  <div class="container">
-    <div class='navigation'>
-      <ul id="menu" class="nav nav-pills">
-        <li>
-          <a href='#/users'>ADD PERSON</a>
-        </li>
-        <li>
-          <a href='#/group'>GROUPS</a>
-        </li>
-        <li>
-          <a href="#/map">MAP</a>
-        </li>
-      </ul>
-    </div>
-  <div ng-view ></div>
+  <h1 class="text-justify">Groups</h1>
+  <div>
+    <ul id="menu" class="nav nav-pills">
+      <li role="presentation">
+        <a href='#/users'>ADD PERSON</a>
+      </li>
+      <li role="presentation">
+        <a href='#/group'>GROUPS</a>
+      </li>
+      <li role="presentation">
+        <a href="#/map">MAP</a>
+      </li>
+    </ul>
   </div>
+  <div class="center-block" ng-view ></div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js" type="text/javascript"></script>
 

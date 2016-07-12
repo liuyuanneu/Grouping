@@ -1,11 +1,17 @@
-<div id='groups' class = 'col-md-6'>
-  <h2>Groups:</h2>
-  <input type='number' name='dividingNumber' ng-model='data.count'>
-  <button ng-click='grouping()'>Grouping</button>
-  <label>Search: </label><input type='text' name='search' ng-model='user'>
-  <ul ng-repeat='pair in data.pairs | filter:user'>
-    <li ng-model='pair.username' ng-repeat='user in pair'>
-      <div ng-model='user.username'>{{user.username}}</div>
-    </li>
-  </ul>
+<div id='groups' class="input-group input-group-lg" class="text-center">
+  <h3>Groups:</h3>
+  <div>
+    <label>Members in Group:</label>
+    <input type='number' name='dividingNumber' ng-model='data.count'>
+    <button ng-click='grouping()'>Grouping</button>
+  </div>
+  <div>
+    <label>Search: </label>
+    <input type='text' name='search' ng-model='user'>
+    <ul ng-repeat='pair in data.pairs | filter:user'>
+      <li ng-model='pair.username' ng-repeat='user in pair'>
+        <div ng-model='user.username'>{{user.username}}</div>
+      </li>
+    </ul>
+  </div>
 </div>
