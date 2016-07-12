@@ -2,7 +2,6 @@
 var db = require('./config.js');
 var mongoose = require('mongoose');
 
-console.log('testttttt')
 var userSchema = mongoose.Schema({
   username:{
     type: String,
