@@ -14,6 +14,7 @@ app.use(parser.json());
 //Set up our routes
 app.get('/api/group',requestHandler.fetchGroup);
 app.post('/api/user',requestHandler.addUser);
+app.get('/api/user',requestHandler.fetchCount);
 
 //Serve the client files
 app.use(express.static(__dirname + '/../client'));

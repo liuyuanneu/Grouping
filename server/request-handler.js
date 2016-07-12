@@ -16,13 +16,13 @@ exports.fetchGroup = function(req,res){
 exports.addUser = function(req,res){
   console.log('This is the req body',req.body);
   var user = req.body;
-  User.findOne({username: user.username})
+  User.findOne({username: user.username.toLowerCase()})
     .exec(function(err,found){
       if(found){
         res.send(200,found);
       }else{
         var newUser = new User({
-          username: user.username,
+          username: user.username.toLowerCase,
           location: user.location
         });
         newUser.save(function(err,newuser){
@@ -32,6 +32,17 @@ exports.addUser = function(req,res){
             res.send(200,newuser);
           }
         })
+      }
+    })
+};
+
+exports.fetchCount = function(req,res){
+  User.find({})
+    .exec(function(err,user){
+      if(!err){
+        res.send(200,user)
+      }else{
+        res.send(500,err);
       }
     })
 }

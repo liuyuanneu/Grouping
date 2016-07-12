@@ -2,6 +2,17 @@ angular.module('groups.user',[])
 
 .controller('UserController',function($scope,$http){
   $scope.user = {};
+  $scope.count = function(){
+    $http({
+      method:'GET',
+      url:'/api/user',
+    })
+    .then(function(res){
+      console.log(res)
+      var users = res.data;
+      $scope.num = users.length;
+    })
+  }
   $scope.addUser = function(user){
     //console.log(user)
     $http({
@@ -10,7 +21,10 @@ angular.module('groups.user',[])
       data: user
     })
     .then(function(res){
-      console.log('returning response from server');
+      console.log('returning response from server',res);
+      $scope.user.username = '';
+      $scope.user.location = '';
+
     })
   }
 })

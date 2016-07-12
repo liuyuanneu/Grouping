@@ -15,7 +15,7 @@ angular.module('groups.group',[])
       var pairsArray = chunk(shuffledArray,numInPair);
       $scope.data.pairs = pairsArray;
       //console.log(pairsArray)
-      $scope.data.count=0;
+      $scope.data.count='';
     })
   }
 })

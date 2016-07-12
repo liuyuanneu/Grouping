@@ -1,4 +1,4 @@
-<div id='user' class='form-group' class="text-center">
+<div id='user' class='form-group' class="text-center" ng-init = 'count()'>
   <h3>Add a Group Member</h3>
   <form name='userForm' ng-submit='addUser(user)' class="form-horizontal">
     <label for='username'>Name</label>
@@ -7,4 +7,5 @@
     <input id="location" type='text' ng-model='user.location' placeholder="Location">
     <button>Add Group Member</button>
   </form>
+  <div ng-model='num'>You have added {{num}} group memebers!</div>
 </div>
