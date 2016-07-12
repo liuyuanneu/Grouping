@@ -2,6 +2,7 @@
 var db = require('./config.js');
 var mongoose = require('mongoose');
 
+console.log('testttttt')
 var userSchema = mongoose.Schema({
   username:{
     type: String,
@@ -14,3 +15,7 @@ var userSchema = mongoose.Schema({
     type: String
   }
 })
+
+var User = mongoose.model('user',userSchema);
+
+module.exports = User
