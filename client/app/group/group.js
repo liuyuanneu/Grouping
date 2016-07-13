@@ -1,20 +1,22 @@
 angular.module('groups.group',[])
-.controller('GroupController',function($scope,$http){
+.controller('GroupController',function($scope,$window,$http){
   $scope.data = {};
 
   $scope.grouping = function(){
-    console.log($scope.data.count);
     return $http({
       method: 'GET',
       url: '/api/group'
     })
     .then(function(res){
-      console.log('res data is ', res.data);
+      //console.log('res data is ', res.data);
+
       var shuffledArray = _.shuffle(res.data)
+      if($scope.data.count === ''){
+        $scope.data.count = 1;
+      }
       var numInPair = $scope.data.count;
       var pairsArray = chunk(shuffledArray,numInPair);
       $scope.data.pairs = pairsArray;
-      //console.log(pairsArray)
       $scope.data.count='';
     })
   }
